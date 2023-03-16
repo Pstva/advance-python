@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hw1_pestova"
+version = "0.0.1"
+authors = [
+  { name="Alena Pestova", email="alpestova1818@gmail.com" },
+]
+description = "Package for AST graph visualization"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "networkx[default]==3.0",
+  "pygraphviz==1.10",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Pstva/advance-python"
+"Bug Tracker" = "https://github.com/Pstva/advance-python/issues"
