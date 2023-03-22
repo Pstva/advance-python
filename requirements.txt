@@ -2,3 +2,4 @@ networkx==3.0
 matplotlib==3.7.1
 pydot==1.4.2
 pygraphviz==1.10
+numpy == 1.24.2
