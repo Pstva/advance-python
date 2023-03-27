@@ -55,17 +55,18 @@ def sync_load(url, path_to_save, n_img):
 
 if __name__ == "__main__":
     url = "https://picsum.photos/200/200"
-    path_to_save = "artifacts/easy/sync_img/"
+    N = 100
 
-    msg = sync_load(url, path_to_save, n_img=20)
-    with open("artifacts/easy/easy.txt", "a") as f:
-        f.write("Синхронное скачивание:\n")
+    path_to_save = "artifacts/easy/img/"
+    msg = asyncio.run(async_load(url, path_to_save, n_img=N))
+    with open("artifacts/easy/easy.txt", "a", encoding="utf-8") as f:
+        f.write("Асинхронное скачивание:\n")
         f.write(msg)
         f.write("\n")
 
-    path_to_save = "artifacts/easy/img/"
-    msg = asyncio.run(async_load(url, path_to_save, n_img=20))
-    with open("artifacts/easy/easy.txt", "a") as f:
-        f.write("Асинхронное скачивание:\n")
+    path_to_save = "artifacts/easy/sync_img/"
+    msg = sync_load(url, path_to_save, n_img=N)
+    with open("artifacts/easy/easy.txt", "a", encoding="utf-8") as f:
+        f.write("Синхронное скачивание:\n")
         f.write(msg)
         f.write("\n")
